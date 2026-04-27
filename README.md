@@ -120,23 +120,38 @@ Build a **production-ready BI solution** that helps logistics managers and suppl
 
 ### Key DAX Measures Created
 
-// On-Time Delivery Rate
-On_Time_Rate = 
-DIVIDE(
-    CALCULATE(COUNTROWS(Shipments), Shipments[Status] = "On-Time"),
-    COUNTROWS(Shipments)
-)
-
-// Cost per Kilometer
-Cost_per_KM = 
-DIVIDE(SUM(Shipments[Shipping_Cost]), SUM(Shipments[Distance_KM]))
-
-// Rolling 30-Day Transit Average
-Rolling_Transit_Avg = 
-CALCULATE(
-    AVERAGE(Shipments[Transit_Days]),
-    DATESINPERIOD(Date[Date], LASTDATE(Date[Date]), -30, DAY)
-)
+•	Total Shipments
+•	Total Shipments = COUNTROWS(Shipments)
+•	Total Shipping Cost
+•	Total Shipping Cost = SUM(Shipments[Shipping Cost (USD)])
+•	Average Distance
+•	Avg Distance km = AVERAGE(Shipments[Distance (km)])
+•	Average Transit Time
+•	Avg Transit Days = AVERAGE(Shipments[Transit Time (days)])
+•	Average Weight
+•	Avg Weight kg = AVERAGE(Shipments[Weight (kg)])
+•	Delivered Count
+•	Delivered Count = CALCULATE(COUNTROWS(Shipments), Shipments[Status] = "Delivered")
+•	On Time Rate by Carrier (Delivered / Total)
+•	On Time Rate = 
+•	DIVIDE(
+•	  CALCULATE(COUNTROWS(Shipments), Shipments[Status] = "Delivered"),
+•	  [Total Shipments],
+•	  0
+•	)
+•	Cancelled Rate
+•	Cancelled Rate = 
+•	DIVIDE(
+•	  CALCULATE(COUNTROWS(Shipments), Shipments[Status] = "Cancelled"),
+•	  [Total Shipments],
+•	  0
+•	)
+•	Average Transit Time by Mode (example for visuals)
+•	Avg Transit by Mode = AVERAGEX(VALUES(Shipments[Mode of Transport]), [Avg Transit Days])
+•	Cost per km
+•	Cost per km = DIVIDE([Total Shipping Cost], SUM(Shipments[Distance (km)]), 0)
+•	Median Transit Time
+•	Median Transit Days = MEDIAN(Shipments[Transit Time (days)])
 
 
 
