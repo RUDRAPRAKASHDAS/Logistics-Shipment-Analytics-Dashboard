@@ -26,7 +26,7 @@ Build a **production-ready BI solution** that helps logistics managers and suppl
 
 | Overview Dashboard | Carrier Performance | Transit Time Analysis |
 |:-----------------:|:-------------------:|:---------------------:|
-| ![Page 1](./Screenshots/Page1_Overview.png) | ![Page 2](./Screenshots/Page2_Carrier_Performance.png) | ![Page 3](./Screenshots/Page3_Transit_Analysis.png) |
+| ![Page 1](https://github.com/RUDRAPRAKASHDAS/Logistics-Shipment-Analytics-Dashboard/blob/main/summary.png) | ![Page 2](https://github.com/RUDRAPRAKASHDAS/Logistics-Shipment-Analytics-Dashboard/blob/main/carrier.png) | ![Page 3](https://github.com/RUDRAPRAKASHDAS/Logistics-Shipment-Analytics-Dashboard/blob/main/Transit%20Analysis.png) |
 
 *Click images to enlarge | All pages cross-filter interactively*
 
