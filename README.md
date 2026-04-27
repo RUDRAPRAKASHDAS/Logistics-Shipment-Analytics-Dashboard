@@ -138,26 +138,6 @@ CALCULATE(
     DATESINPERIOD(Date[Date], LASTDATE(Date[Date]), -30, DAY)
 )
 
-📁 Repository Structure
-text
-Logistics-Shipment-Analytics-Dashboard/
-│
-├── README.md                          # Project documentation (this file)
-│
-├── 📁 PBIX/
-│   └── Logistics_Shipment_Analytics.pbix    # Main Power BI file
-│
-├── 📁 Screenshots/
-│   ├── Page1_Overview.png
-│   ├── Page2_Carrier_Performance.png
-│   └── Page3_Transit_Analysis.png
-│
-├── 📁 Data/
-│   ├── raw_shipments.csv              # Source data (if shareable)
-│   └── data_dictionary.md             # Column descriptions
-│
-└── 📁 Documentation/
-    └── DAX_Measures_List.txt          # Complete DAX formulas reference
 
 
 📢 Connect With Me
