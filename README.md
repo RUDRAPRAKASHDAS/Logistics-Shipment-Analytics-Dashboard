@@ -120,7 +120,6 @@ Build a **production-ready BI solution** that helps logistics managers and suppl
 
 ### Key DAX Measures Created
 
-```dax
 // On-Time Delivery Rate
 On_Time_Rate = 
 DIVIDE(
